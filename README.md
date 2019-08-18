@@ -5,7 +5,7 @@ Lightweight docker image built on top of **debian:jessie-slim** with installed x
 * ESP8266_RTOS_SDK (v3.2)
 * esptool.py (v2.4)
 * make (v4.2)
-* cmake (v3.14)
+* cmake (v3.5)
 
 DockerHub: https://hub.docker.com/r/lpodkalicki/esp8266-toolchain
 
