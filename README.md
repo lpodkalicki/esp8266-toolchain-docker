@@ -41,9 +41,12 @@ curl https://raw.githubusercontent.com/lpodkalicki/esp8266-toolchain-docker/mast
 
 ```bash
 $ cd your-project/
+$ esp8266-toolchain idf.py build
+$ esp8266-toolchain idf.py flash
+$ esp8266-toolchain idf.py monitor
 $ esp8266-toolchain xtensa-lx106-elf-gcc --version
 $ esp8266-toolchain make -version
 $ esp8266-toolchain cmake -version
 $ esp8266-toolchain make menuconfig
-$ esp8266-toolchain make && make flash
+$ esp8266-toolchain make && make flash monitor
 ```
