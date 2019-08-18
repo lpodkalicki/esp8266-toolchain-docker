@@ -45,6 +45,7 @@ RUN git clone https://github.com/espressif/ESP8266_RTOS_SDK.git \
 	&& python -m pip install --user -r ${IDF_PATH}/requirements.txt \
 	&& wget -P ${IDF_PATH}/components/esptool_py ${MISSING_ESPTOOL_CMAKE_URL}
 
+ENV PATH="${IDF_PATH}/tools:${PATH}"
 ENV IDF_PATH=${IDF_PATH}
 ENV PWD=/build
 
