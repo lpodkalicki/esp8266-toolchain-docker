@@ -12,7 +12,7 @@ DockerHub: https://hub.docker.com/r/lpodkalicki/esp8266-toolchain
 ## Building image locally
 
 ```bash
-git clone git@github.com:lpodkalicki/esp8266-toolchain-docker.git
+git clone https://github.com/lpodkalicki/esp8266-toolchain-docker.git
 cd eps8266-toolchain
 docker build --rm -t lpodkalicki/esp8266-toolchain:latest .
 ```
