@@ -40,10 +40,13 @@ ENV PATH="${TOOLCHAIN_PATH}/bin:${PATH}"
 ARG IDF_PATH=${TOOLS_PATH}/ESP8266_RTOS_SDK
 ARG MISSING_ESPTOOL_CMAKE_URL=https://raw.githubusercontent.com/espressif/esp-idf/master/components/esptool_py/run_esptool.cmake
 RUN git clone https://github.com/espressif/ESP8266_RTOS_SDK.git \
-	&& pip install --upgrade pip \
+	&& python -m pip install pip==20.1 \
 	&& pip install --upgrade setuptools \
 	&& python -m pip install --user -r ${IDF_PATH}/requirements.txt \
 	&& wget -P ${IDF_PATH}/components/esptool_py ${MISSING_ESPTOOL_CMAKE_URL}
+
+WORKDIR /tools/ESP8266_RTOS_SDK/
+RUN git submodule init && git submodule update
 
 ENV PATH="${IDF_PATH}/tools:${PATH}"
 ENV IDF_PATH=${IDF_PATH}
